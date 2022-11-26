@@ -1,13 +1,12 @@
 const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
-  projectId: "et3bg9",
   reporter: "cypress-mochawesome-reporter",
   e2e: {
     setupNodeEvents(on, config) {
       require("cypress-mochawesome-reporter/plugin")(on);
     },
-    specPattern: "cypress/e2e/**/*/.{cy,spec}.{js,jsx,ts,tsx}",
+    specPattern: "cypress/e2e/1-getting-started/*.{cy,spec}.{js,jsx,ts,tsx}",
     baseUrl: "https://example.cypress.io",
     pageLoadTimeout: 1000,
     viewportHeight: 950,
